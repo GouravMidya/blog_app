@@ -1,28 +1,34 @@
-# Step 4: Dynamic Data Fetching
+# Step 6: Deployment
 
-This branch fetches blog data dynamically from a public API like jsonplaceholder.typicode.com .It replaces the mock data in the blog listing and dynamic blog post pages with API results.
+In this branch, we prepared the project for production by:
+1. **Updating Site Metadata**:
+   - Updated the site title and description in the root layout for better explaination.
+2. **Deploying the Project**:
+   - Deployed the application using **Vercel CLI** for live hosting.
 
 ---
 
 ## Features
-1. **Dynamic Data Fetching**:
-   - Data fetched from a server to simulate it being fetched from db
-   
+1. **Metadata Updates**:
+   - Updated site title to "Blog App".
+   - Updated site description for SEO purposes.
+2. **Vercel Deployment**:
+   - Configured and deployed the application to Vercel.
+
 ---
 
 ## Folder Structure
-The folder structure remains unchanged, but we’ll add API integration for blog data.
+No changes were made to the folder structure, but the following files were updated:
+1. `src/app/layout.js`: Updated metadata.
 
 ---
 
 ## Setup Instructions
-Follow these steps to run the app with dynamic blog pages:
-
 1. **Clone the repository**:
    ```bash
    git clone https://github.com/GouravMidya/blog_app.git
    cd blog_app
-   git checkout step_4_dynamic_data_fetching
+   git checkout step_6_deployment
    ```
 
 2. **Install dependencies**:
@@ -35,31 +41,39 @@ Follow these steps to run the app with dynamic blog pages:
    npm run dev
    ```
 
-4. **View the app**:
-   - Visit [http://localhost:3000/blog](http://localhost:3000/blog) for the blog listing page.
-   - Visit [http://localhost:3000/blog/post-1](http://localhost:3000/blog/post-1) for the first blog post.
+4. **Deploy the project**:
+   - Install Vercel CLI:
+     ```bash
+     npm install -g vercel
+     ```
+   - Login to Vercel:
+     ```bash
+     vercel login
+     ```
+   - Deploy the app:
+     ```bash
+     vercel
+     ```
+   - Follow the prompts to deploy the app to Vercel.
+
+5. **Access the live project**:
+   - Vercel will provide a live URL upon deployment.
 
 ---
 
 ## Key Files
-1. **Blog Listing Page**: `src/app/blog/page.js`
-2. **Dynamic Blog Post Page**: `src/app/blog/[slug]/page.js`
+1. **Updated Metadata**: `src/app/layout.js`.
 
 ---
 
 ## Screenshots
-### Blog Listing Page
-![image](https://github.com/user-attachments/assets/131a0064-199b-4ed6-b633-1653f163adec)
-
-
-
-### Dynamic Blog Post Page
-![image](https://github.com/user-attachments/assets/0acc3f14-18c6-4072-85a2-83fb7cc02178)
-
-
+### Live Deployment
+![image](https://github.com/user-attachments/assets/e65cd919-0e74-4faf-adca-4100033982d8)
 
 ---
 
 ## Next Steps
-In **Step 5**, we will:
-Make use of Card component from shadcn to beutify our ui
+The application is now live! I encourage participants to:
+- Explore the blog app.
+- Contribute new features or fixes.
+- Fork and deploy your own versions.

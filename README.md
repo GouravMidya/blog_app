@@ -38,7 +38,7 @@ Follow these steps to run the skeleton app:
 
 1. **Clone the repository**:
    ```bash
-   git clone [<repository_url>](https://github.com/GouravMidya/blog_app.git)
+   git clone https://github.com/GouravMidya/blog_app.git
    cd blog_app
    git checkout step_1_skeleton_app
    ```

@@ -1,36 +1,83 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Step 1: Skeleton App
 
-## Getting Started
+This branch represents the foundation of our project: a basic **Next.js app** using **folder-based routing** with the `app/` directory and **ShadCN UI components** integrated with Tailwind CSS. 
 
-First, run the development server:
+## Features
+1. **Folder-Based Routing**:
+   - `app/` directory structure for pages and layouts.
+2. **Global Layout**:
+   - Centralized layout for shared styling.
+3. **Reusable UI Components**:
+   - ShadCN `Button` component styled with Tailwind CSS.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+---
+
+## Folder Structure
+```
+blog_app/
+├── public/
+├── src/
+│   ├── globals.css      # Global Tailwind CSS styles
+│   ├── components/
+│   │   └── ui/  # Reusable ShadCN components
+│   └── app/
+│       ├── layout.js    # Root layout for the app
+│       ├── page.js      # Home page
+│       ├── about/       # About page
+│       │   └── page.js
+├── package.json
+├── .eslintrc.json
+├── .gitignore
+└── tailwind.config.js
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## Setup Instructions
+Follow these steps to run the skeleton app:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1. **Clone the repository**:
+   ```bash
+   git clone [<repository_url>](https://github.com/GouravMidya/blog_app.git)
+   cd blog_app
+   git checkout step_1_skeleton_app
+   ```
 
-## Learn More
+2. **Install dependencies**:
+   ```bash
+   npm install
+   ```
 
-To learn more about Next.js, take a look at the following resources:
+3. **Run the development server**:
+   ```bash
+   npm run dev
+   ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+4. **View the app**:
+   - Visit [http://localhost:3000](http://localhost:3000) for the home page.
+   - Visit [http://localhost:3000/about](http://localhost:3000/about) for the about page.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## Key Files
+1. **Home Page**: `src/app/page.js`
+2. **About Page**: `src/app/about/page.js`
+3. **Global Layout**: `src/app/layout.js`
+4. **Reusable Button**: `src/components/ui/Button.js`
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Screenshots
+### Home Page
+![image](https://github.com/user-attachments/assets/f36c6d05-9fa3-42f4-9dd8-39df600aab85)
+
+### About Page
+![image](https://github.com/user-attachments/assets/fa3a12b4-882f-4b45-badd-358438d2f6f7)
+
+---
+
+## Next Steps
+In **Step 2**, we will:
+- Add a **navigation bar** with links to the "Home" and "About" pages.
+- Improve the user experience using ShadCN components.
+

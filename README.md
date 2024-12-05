@@ -1,35 +1,17 @@
-# Step 3: Dynamic Blog Page
+# Step 4: Dynamic Data Fetching
 
-This branch introduces a **dynamic blog page** to the project using **folder-based routing** in the Next.js `app/` directory. It demonstrates how to build pages with dynamic parameters.
+This branch fetches blog data dynamically from a public API like jsonplaceholder.typicode.com .It replaces the mock data in the blog listing and dynamic blog post pages with API results.
 
 ---
 
 ## Features
-1. **Dynamic Routing**:
-   - Blog post URLs are dynamically generated based on the `slug` parameter (e.g., `/blog/post-1`).
-   - Routes are managed using the `[slug]/` folder structure.
-2. **Mock Data**:
-   - Blog data is sourced from an in-memory array for simplicity.
-
+1. **Dynamic Data Fetching**:
+   - Data fetched from a server to simulate it being fetched from db
+   
 ---
 
 ## Folder Structure
-```
-src/
-├── components/
-│   └── ui/
-│       ├── Button.js    # Reusable button
-│       └── NavBar.js    # Navigation bar with Blog link
-└── app/
-    ├── blog/
-    │   ├── page.js      # Blog listing page
-    │   └── [slug]/      # Dynamic routing folder
-    │       └── page.js  # Dynamic blog post page
-    ├── layout.js        # Root layout with NavBar
-    ├── page.js          # Home page
-    ├── about/
-        └── page.js      # About page
-```
+The folder structure remains unchanged, but we’ll add API integration for blog data.
 
 ---
 
@@ -40,7 +22,7 @@ Follow these steps to run the app with dynamic blog pages:
    ```bash
    git clone https://github.com/GouravMidya/blog_app.git
    cd blog_app
-   git checkout step_3_dynamic_blog_page
+   git checkout step_4_dynamic_data_fetching
    ```
 
 2. **Install dependencies**:
@@ -67,15 +49,17 @@ Follow these steps to run the app with dynamic blog pages:
 
 ## Screenshots
 ### Blog Listing Page
-![image](https://github.com/user-attachments/assets/e81d1e54-8f38-4278-8547-4fd3da9dd572)
+![image](https://github.com/user-attachments/assets/131a0064-199b-4ed6-b633-1653f163adec)
+
 
 
 ### Dynamic Blog Post Page
-![image](https://github.com/user-attachments/assets/8b50ebed-2319-4feb-9a64-63b3f4bde5ba)
+![image](https://github.com/user-attachments/assets/0acc3f14-18c6-4072-85a2-83fb7cc02178)
+
 
 
 ---
 
 ## Next Steps
-In **Step 4**, we will:
-1. Replace mock data with **dynamic API fetching** using fetch method.
+In **Step 5**, we will:
+Make use of Card component from shadcn to beutify our ui

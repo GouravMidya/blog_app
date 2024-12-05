@@ -1,46 +1,43 @@
-# Step 1: Skeleton App
+# Step 2: Navigation Bar
 
-This branch represents the foundation of our project: a basic **Next.js app** using **folder-based routing** with the `app/` directory and **ShadCN UI components** integrated with Tailwind CSS. 
+This branch introduces a **navigation bar** to the project, enabling seamless navigation between pages using folder-based routing in Next.js. The navigation bar is styled with Tailwind CSS and built as a reusable component.
+
+---
 
 ## Features
-1. **Folder-Based Routing**:
-   - `app/` directory structure for pages and layouts.
-2. **Global Layout**:
-   - Centralized layout for shared styling.
-3. **Reusable UI Components**:
-   - ShadCN `Button` component styled with Tailwind CSS.
+1. **Navigation Bar**:
+   - Includes links to the "Home" and "About" pages.
+   - Built with Tailwind CSS for styling.
+   - Reusable as part of the global layout.
+2. **Updated Layout**:
+   - Navigation bar is included in the root layout (`layout.js`).
 
 ---
 
 ## Folder Structure
 ```
-blog_app/
-├── public/
-├── src/
-│   ├── globals.css      # Global Tailwind CSS styles
-│   ├── components/
-│   │   └── ui/  # Reusable ShadCN components
-│   └── app/
-│       ├── layout.js    # Root layout for the app
-│       ├── page.js      # Home page
-│       ├── about/       # About page
-│       │   └── page.js
-├── package.json
-├── .eslintrc.json
-├── .gitignore
-└── tailwind.config.js
+src/
+├── components/
+│   └── ui/
+│       ├── Button.js    # Reusable button
+│       └── NavBar.js    # New navigation bar component
+└── app/
+    ├── layout.js        # Root layout with NavBar
+    ├── page.js          # Home page
+    ├── about/
+        └── page.js      # About page
 ```
 
 ---
 
 ## Setup Instructions
-Follow these steps to run the skeleton app:
+Follow these steps to run the app with the navigation bar:
 
 1. **Clone the repository**:
    ```bash
    git clone https://github.com/GouravMidya/blog_app.git
    cd blog_app
-   git checkout step_1_skeleton_app
+   git checkout step_2_navbar
    ```
 
 2. **Install dependencies**:
@@ -60,24 +57,18 @@ Follow these steps to run the skeleton app:
 ---
 
 ## Key Files
-1. **Home Page**: `src/app/page.js`
-2. **About Page**: `src/app/about/page.js`
-3. **Global Layout**: `src/app/layout.js`
-4. **Reusable Button**: `src/components/ui/Button.js`
+1. **Navigation Bar**: `src/components/ui/NavBar.js`
+2. **Updated Layout**: `src/app/layout.js`
 
 ---
 
 ## Screenshots
-### Home Page
-![image](https://github.com/user-attachments/assets/f36c6d05-9fa3-42f4-9dd8-39df600aab85)
-
-### About Page
-![image](https://github.com/user-attachments/assets/fa3a12b4-882f-4b45-badd-358438d2f6f7)
+### Navigation Bar
+![image](https://github.com/user-attachments/assets/44f6dc17-0249-4dc7-872f-101e29af640b)
 
 ---
 
 ## Next Steps
-In **Step 2**, we will:
-- Add a **navigation bar** with links to the "Home" and "About" pages.
-- Improve the user experience using ShadCN components.
-
+In **Step 3**, we will:
+1. Create a **dynamic blog page** with routing parameters (e.g., `/blog/:slug`).
+2. Use Next.js dynamic routing to demonstrate key functionality.
